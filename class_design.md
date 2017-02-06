@@ -3,21 +3,16 @@ This will be the design we follow while building this project.
 
 ##Files
 - main.cpp
-- Tool
-  - tool.hpp
-  - tool.cpp
-- Rock
-  - rock.hpp
-  - rock.cpp
-- Paper
-  - paper.hpp
-  - paper.cpp
-- Scissor
-  - scissor.hpp
-  - scissor.cpp
-- RPSGame
-  - RPSGame.hpp
-  - RPSGame.cpp
+- tool.hpp
+- tool.cpp
+- rock.hpp
+- rock.cpp
+- paper.hpp
+- paper.cpp
+- scissor.hpp
+- scissor.cpp
+- RPSGame.hpp
+- RPSGame.cpp
 
 ##Classes
 ###Tool (Abstract)
@@ -49,3 +44,18 @@ This will be the design we follow while building this project.
    - **Scissor()** -- Default constructor, will call **Tool()**
    - **Scissor(int strength)** -- Strength constructor, will call **Tool(strength)**
    - **int fight(Tool\* tool)** -- Override the abstract **fight** function for Scissor. Scissor's strength should be doubled when fighting Paper, or halved when fighting Rock.
+   
+###RPSGame
+  - Private Members
+    - **int human_wins** -- Counter for the number of times the human won the game.
+    - **int computer_wins** -- Counter for the number of times the computer won the game.
+    - **int ties** -- Counter for the number of games that resulted in ties.
+    - **Tool\* human** -- The pointer to the current human tool.
+    - **Tool\* computer** -- The pointer to the current computer tool.
+  - Public Members
+    - **void setTool(char player, Tool\* tool)** -- This function will set the player's tools.
+      - The player variable will contain a **'*h*'** for human or a **'*c*'** for computer.  Then the current corresponding tool will need to be deleted from memory and the new tool given to the corresponding variable.
+    - **char playGame()** -- This function will enact a game between the current player and computer tools.
+      - It will increment the correct counter internally then return **'*h*'** for human win, **'*c*'** for computer win, or **'*t*'** for tie.
+    - **Tool\* createComputerTool()** -- Will return a new computer tool.
+      - This will be called to create a random or calculated computer tool before a new round is played.  This can either be done in the main function then set using the setTool method, or can be called at the beginning of the playGame method.
