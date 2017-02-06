@@ -9,8 +9,8 @@ This will be the design we follow while building this project.
 - rock.cpp
 - paper.hpp
 - paper.cpp
-- scissor.hpp
-- scissor.cpp
+- scissors.hpp
+- scissors.cpp
 - RPSGame.hpp
 - RPSGame.cpp
 
