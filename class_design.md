@@ -3,16 +3,21 @@ This will be the design we follow while building this project.
 
 ##Files
 - main.cpp
-- tool.hpp
-- tool.cpp
-- rock.hpp
-- rock.cpp
-- paper.hpp
-- paper.cpp
-- scissors.hpp
-- scissors.cpp
-- RPSGame.hpp
-- RPSGame.cpp
+- Tool
+  - tool.hpp
+  - tool.cpp
+- Rock
+  - rock.hpp
+  - rock.cpp
+- Paper
+  - paper.hpp
+  - paper.cpp
+- Scissor
+  - scissor.hpp
+  - scissor.cpp
+- RPSGame
+  - RPSGame.hpp
+  - RPSGame.cpp
 
 ##Classes
 ###Tool (Abstract)
