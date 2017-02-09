@@ -29,20 +29,20 @@ This will be the design we follow while building this project.
     
 ###Rock (Derived from **Tool**)
  - Public Members
-   - **Rock()** -- Default constructor, will call **Tool()**
-   - **Rock(int strength)** -- Strength constructor, will call **Tool(strength)**
+   - **Rock()** -- Default constructor, will set type, **'*r*'**, and call **Tool()**
+   - **Rock(int strength)** -- Strength constructor, will set type, **'*r*'**, and call **Tool(strength)**
    - **int fight(Tool\* tool)** -- Override the abstract **fight** function for Rock. Rock's strength should be doubled when fighting Scissor, or halved when fighting Paper.
    
 ###Paper (Derived from **Tool**)
  - Public Members
-   - **Paper()** -- Default constructor, will call **Tool()**
-   - **Paper(int strength)** -- Strength constructor, will call **Tool(strength)**
+   - **Paper()** -- Default constructor, will set type, **'*p*'**, and call **Tool()**
+   - **Paper(int strength)** -- Strength constructor, will set type, **'*p*'**, and call **Tool(strength)**
    - **int fight(Tool\* tool)** -- Override the abstract **fight** function for Paper. Paper's strength should be doubled when fighting Rock, or halved when fighting Scissor.
 
 ###Scissor (Derived from **Tool**)
  - Public Members
-   - **Scissor()** -- Default constructor, will call **Tool()**
-   - **Scissor(int strength)** -- Strength constructor, will call **Tool(strength)**
+   - **Scissor()** -- Default constructor, will set type, **'*s*'**, and call **Tool()**
+   - **Scissor(int strength)** -- Strength constructor, will set type, **'*s*'**, and call **Tool(strength)**
    - **int fight(Tool\* tool)** -- Override the abstract **fight** function for Scissor. Scissor's strength should be doubled when fighting Paper, or halved when fighting Rock.
    
 ###RPSGame
