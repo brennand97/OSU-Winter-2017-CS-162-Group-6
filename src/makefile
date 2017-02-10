@@ -18,9 +18,9 @@ LIBS = menu_library/douglbre_util.obj
 # For Linux
 #LIBS = menu_library/douglbre_util.o
 
-SRCS = main.cpp
+SRCS = main.cpp tool.cpp
 
-HEADERS = menu_library/douglbre_util.hpp
+HEADERS = menu_library/douglbre_util.hpp tool.hpp
 
 EXECUTABLE = main
 
