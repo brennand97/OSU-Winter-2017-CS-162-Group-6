@@ -3,14 +3,14 @@ This will be the design we follow while building this project.
 
 ##Files
 - main.cpp
-- ~~tool.hpp~~ -- Completed by **aarontj73**
-- ~~tool.cpp~~ -- Completed by **aarontj73**
-- rock.hpp
-- rock.cpp
-- paper.hpp
-- paper.cpp
-- scissor.hpp
-- scissor.cpp
+- ~~tool.hpp~~
+- ~~tool.cpp~~
+- ~~rock.hpp~~
+- ~~rock.cpp~~
+- ~~paper.hpp~~
+- ~~paper.cpp~~
+- ~~scissor.hpp~~
+- ~~scissor.cpp~~
 - RPSGame.hpp
 - RPSGame.cpp
 
