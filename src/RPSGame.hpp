@@ -10,9 +10,6 @@
 #define RPSGAME_HPP
 
 #include "tool.hpp"
-#include "paper.hpp"
-#include "rock.hpp"
-#include "scissors.hpp"
 
 class RPSGame
 {
