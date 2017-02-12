@@ -5,6 +5,7 @@
  * Description: Implementation file of RPSGame class
  *****************************************************/
 #include "RPSGame.hpp"
+#include "tool.hpp"
 #include <iostream>
 
 using std::cout;
