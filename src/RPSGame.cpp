@@ -20,7 +20,13 @@ RPSGame::RPSGame()
 
 void RPSGame::setTool(char player, Tool *tool)
 {
-
+	if( player == 'h' ) {
+		delete human;
+		human = tool;
+	} else if ( player == 'c' ) {
+		delete computer;
+		computer = tool;
+	}
 }
 
 
