@@ -21,6 +21,10 @@ RPSGame::RPSGame()
 	ties = 0;
 }
 
+RPSGame::~RPSGame() {
+	delete human;
+	delete computer;
+}
 
 void RPSGame::setTool(char player, Tool *tool)
 {
