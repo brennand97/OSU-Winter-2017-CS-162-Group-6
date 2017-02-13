@@ -8,17 +8,21 @@
 
 #include <iostream>
 #include <string>
+#include <chrono>
 #include "paper.hpp"
 #include "rock.hpp"
 #include "scissors.hpp"
 #include "RPSGame.hpp"
-#include "menu_library/douglbre_util.hpp"
+#include "douglbre_util.hpp"
 
 const int MENU_COUNT = 1;
 
 // This is the main function that will be called on program execution.
 // To compile program run "make", then execute the file "main".
 int main (int argc, char** argv) {
+	
+    // Set seed for random function
+    std::srand(std::time(0));
 
     RPSGame* game = new RPSGame();
 

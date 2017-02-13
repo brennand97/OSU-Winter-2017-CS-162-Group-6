@@ -10,22 +10,16 @@ CXXFLAGS += -g
 
 LDFLAGS =
 
-OBJS = main.o tool.o paper.o rock.o scissors.o RPSGame.o
+OBJS = main.o tool.o paper.o rock.o scissors.o RPSGame.o douglbre_util.o
 
-# For Windows
-LIBS = menu_library/douglbre_util.obj
+SRCS = main.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp douglbre_util.cpp
 
-# For Linux
-#LIBS = menu_library/douglbre_util.o
-
-SRCS = main.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp
-
-HEADERS = menu_library/douglbre_util.hpp tool.hpp paper.hpp rock.hpp scissors.hpp RPSGame.hpp
+HEADERS = douglbre_util.hpp tool.hpp paper.hpp rock.hpp scissors.hpp RPSGame.hpp
 
 EXECUTABLE = main
 
 main: $(OBJS) $(HEADERS)
-	$(CXX) $(LDFLAGS) $(OBJS) $(LIBS) -o $(EXECUTABLE)
+	$(CXX) $(LDFLAGS) $(OBJS) -o $(EXECUTABLE)
 
 $(OBJS): $(SRCS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp)
