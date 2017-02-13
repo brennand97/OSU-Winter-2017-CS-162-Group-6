@@ -6,6 +6,9 @@
  *****************************************************/
 #include "RPSGame.hpp"
 #include "tool.hpp"
+#include "rock.hpp"
+#include "paper.hpp"
+#include "scissors.hpp"
 #include <iostream>
 
 using std::cout;
@@ -31,31 +34,30 @@ void RPSGame::setTool(char player, Tool *tool)
 }
 
 
-Tool* RPSGame::createComputerTool()
+Tool* RPSGame::createComputerTool(int strength)
 {
 	//get a random number between 1-3
 	int c = rand() % 3 + 1;
 
 	if(c == 1)
 	{
-		return new Rock();
+		return new Rock(strength);
 	}
 	if(c == 2)
 	{
-		return new Paper();
+		return new Paper(strength);
 	}	
 	if(c == 3)
 	{
-		return new Scissors();
+		return new Scissors(strength);
 	}
+
+	return nullptr;
 }
 
 char RPSGame::playGame()
 {
 	Fight result;
-	
-	//will this be called here or in main?
-	computer = createComputertool();
 
 	//call human fight method with computer's tool as parameter
 	result = human->fight(computer);
@@ -79,4 +81,12 @@ char RPSGame::playGame()
 		return 't';
 	}
 	
+}
+
+void RPSGame::printScores() {
+
+	cout << "  Human Wins:    " << this->human_wins << endl;
+	cout << "  Computer Wins: " << this->computer_wins << endl;
+	cout << "  Ties:          " << this->ties << endl;
+
 }

@@ -13,6 +13,7 @@
 
 class Paper : public Tool
 {
+public:
     // default constructor
     Paper();
 

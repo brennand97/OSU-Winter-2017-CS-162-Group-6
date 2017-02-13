@@ -13,6 +13,7 @@
 
 class Rock : public Tool
 {
+public:
     // default constructor
     Rock();
 
