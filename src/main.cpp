@@ -49,14 +49,16 @@ int main (int argc, char** argv) {
                     if (s == 'y' || s == 'n') {
                         return true;
                     } else {
-                        std::cout << "  Please respond yes, 'y', or no, 'n'." << std::endl;
+                        std::cout << "Please respond yes, 'y', or no, 'n'." << std::endl;
                         return false;
                     }
                 };
 				
-                douglbre::user::validate_input<char>("  Tool Type (Paper 'p', Rock 'r', Scissors 's'): ", &type, type_valid);
-                douglbre::user::validate_input<char>("  Would you like to specify a specific strength? (y/n): ", &strength, strength_valid);
+				// Ask the user for inputs	
+                douglbre::user::validate_input<char>("Tool Type (Paper 'p', Rock 'r', Scissors 's'): ", &type, type_valid);
+                douglbre::user::validate_input<char>("Would you like to specify a specific strength? (y/n): ", &strength, strength_valid);
 
+				// Initialize player tool without strength
                 if (type == 'p') {
                     player = new Paper();
                 } else if (type == 's') {
@@ -64,7 +66,8 @@ int main (int argc, char** argv) {
                 } else if (type == 'r') {
                     player = new Rock();
                 }
-
+				
+				// For if the user asks for strength
                 if (strength == 'y') {
 
                     int mag_strength = 0;
@@ -74,24 +77,31 @@ int main (int argc, char** argv) {
                         if (a > 0) {
                             return true;
                         } else {
-                            std::cout << "  Strength has to be greater then 0." << std::endl;
+                            std::cout << "Strength has to be greater then 0." << std::endl;
                             return false;
                         }
                     };
 
-                    douglbre::user::validate_input<int>("  Magnitude of the tool's strength: ", &mag_strength, mag_valid);
+					// Get the user's respective strengths
+                    douglbre::user::validate_input<int>("Magnitude of the tool's strength: ", &mag_strength, mag_valid);
 
+					// Set computer tool within a resonable range of the user's requested strength for fair gameplay
                     game->setTool('c', game->createComputerTool(douglbre::util::rand_clamp(1, mag_strength*2)));
-                    player->setStrength(mag_strength);
+                    
+					// Set the players strength to the user's requested strength
+					player->setStrength(mag_strength);
 
                 } else {
-
+					
+					// Create default strength random computer tool
                     game->setTool('c', game->createComputerTool(1));
 
                 }
-
+				
+				// Set the player tool
                 game->setTool('h', player);
-
+				
+				// Play the game and display the scores
                 game->playGame();
                 game->printScores();
 

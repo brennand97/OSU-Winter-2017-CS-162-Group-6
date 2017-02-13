@@ -64,19 +64,19 @@ char RPSGame::playGame()
 
 	if(result == WIN)
 	{
-		cout << "  Human wins" << endl;
+		cout << "Human wins" << endl;
 		human_wins++;
 		return 'h';
 	}	
 	else if(result == LOSE)
 	{
-		cout << "  Computer wins" << endl;
+		cout << "Computer wins" << endl;
 		computer_wins++;
 		return 'c';
 	}
 	else
 	{
-		cout << "  It's a tie" << endl;
+		cout << "It's a tie" << endl;
 		ties++;
 		return 't';
 	}
