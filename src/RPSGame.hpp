@@ -17,13 +17,14 @@ private:
 	int human_wins;		//counter for number of human wins
 	int computer_wins;	//counter for number of computer wins
 	int ties;		//counter for number of ties
-	Tool *human;		//pointer for current human tool
-	Tool *computer;		//pointer for current computer tool
+	Tool *human = nullptr;		//pointer for current human tool
+	Tool *computer = nullptr;		//pointer for current computer tool
 
 public:
 	RPSGame();
 	void setTool(char player, Tool *tool);
 	char playGame();
-	Tool *createComputerTool();
+	Tool *createComputerTool(int strength);
+	void printScores();
 };
 #endif

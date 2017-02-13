@@ -4,13 +4,13 @@ CXX = g++
 CXXFLAGS = -std=c++0x
 
 #DEBUG flags
-#CXXFLAGS += -Wall
-#CXXFLAGS += -pedantic-errors
-#CXXFLAGS += -g
+CXXFLAGS += -Wall
+CXXFLAGS += -pedantic-errors
+CXXFLAGS += -g
 
 LDFLAGS =
 
-OBJS = main.o
+OBJS = main.o tool.o paper.o rock.o scissors.o RPSGame.o
 
 # For Windows
 LIBS = menu_library/douglbre_util.obj
@@ -18,9 +18,9 @@ LIBS = menu_library/douglbre_util.obj
 # For Linux
 #LIBS = menu_library/douglbre_util.o
 
-SRCS = main.cpp tool.cpp
+SRCS = main.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp
 
-HEADERS = menu_library/douglbre_util.hpp tool.hpp
+HEADERS = menu_library/douglbre_util.hpp tool.hpp paper.hpp rock.hpp scissors.hpp RPSGame.hpp
 
 EXECUTABLE = main
 

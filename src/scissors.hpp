@@ -13,6 +13,7 @@
 
 class Scissors : public Tool
 {
+public:
     // default constructor
     Scissors();
 
