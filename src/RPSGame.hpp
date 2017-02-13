@@ -22,6 +22,7 @@ private:
 
 public:
 	RPSGame();
+	~RPSGame();
 	void setTool(char player, Tool *tool);
 	char playGame();
 	Tool *createComputerTool(int strength);
