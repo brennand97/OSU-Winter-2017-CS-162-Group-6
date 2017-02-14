@@ -5,8 +5,8 @@ enum Fight {WIN, LOSE, DRAW};
 
 class Tool
 {
-private:
-	int strength; 
+protected:
+	int strength;
 	char type;
 
 public:
@@ -14,6 +14,8 @@ public:
 	Tool(int strength);
 	virtual ~Tool();
 	void setStrength(int strength);
-	virtual int fight(Tool *tool) = 0;
+	int getStrength() const;
+	char getType() const;
+	virtual Fight fight(Tool *tool) = 0;
 };
 #endif
