@@ -14,6 +14,7 @@
 using std::cout;
 using std::endl;
 
+// Basic constructor for RPSGame class
 RPSGame::RPSGame()
 {
 	human_wins = 0;
@@ -21,11 +22,13 @@ RPSGame::RPSGame()
 	ties = 0;
 }
 
+// Deconstructor for RPSGame class
 RPSGame::~RPSGame() {
 	delete human;
 	delete computer;
 }
 
+// This method allows the computer's, 'c', or the human's, 'h', tool to be set to a new tool pointer.
 void RPSGame::setTool(char player, Tool *tool)
 {
 	if( player == 'h' ) {
@@ -37,7 +40,7 @@ void RPSGame::setTool(char player, Tool *tool)
 	}
 }
 
-
+// This creates a random new tool with strength 'strength' that is used for the computer's logic.
 Tool* RPSGame::createComputerTool(int strength)
 {
 	//get a random number between 1-3
@@ -59,6 +62,8 @@ Tool* RPSGame::createComputerTool(int strength)
 	return nullptr;
 }
 
+// This method plays a game between the current human and computer tool's.
+// It updates the correct class members and returns the winner as a char, 'h' or 'c'.
 char RPSGame::playGame()
 {
 	Fight result;
@@ -87,6 +92,7 @@ char RPSGame::playGame()
 	
 }
 
+// This method prints the current human_wins, computer_wins, and ties to the standard out in human readable format.
 void RPSGame::printScores() {
 
 	cout << "  Human Wins:    " << this->human_wins << endl;
