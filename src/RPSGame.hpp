@@ -11,8 +11,8 @@
 
 #include "tool.hpp"
 
-class RPSGame
-{
+// The purpose of this class is to hold all the values required to run a rock paper sisscors game.
+class RPSGame {
 private:
 	int human_wins;		//counter for number of human wins
 	int computer_wins;	//counter for number of computer wins
@@ -28,4 +28,5 @@ public:
 	Tool *createComputerTool(int strength);
 	void printScores();
 };
+
 #endif
