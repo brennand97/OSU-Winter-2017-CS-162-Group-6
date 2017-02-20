@@ -1,5 +1,5 @@
 /***********************************************************************
- * Program name: CS 162 Group Project}
+ * Program name: CS 162 Group Project
  * Author:       Brennan Douglas
  * Date:         02/06/2017
  * Description:  This program is a simulation of rock, paper, scissors.
