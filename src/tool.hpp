@@ -12,10 +12,11 @@
 #ifndef TOOL_HPP
 #define TOOL_HPP
 
+// This enum is used to inform if a battle was won, lost, or tied.
 enum Fight {WIN, LOSE, DRAW};
 
-class Tool
-{
+// This class is the abstract representation of a tool used in rock paper sisscors.
+class Tool {
 protected:
 	int strength;
 	char type;
@@ -29,4 +30,5 @@ public:
 	char getType() const;
 	virtual Fight fight(Tool *tool) = 0; //pure abstract function. Cannot instantiate tools by themselves.
 };
+
 #endif
