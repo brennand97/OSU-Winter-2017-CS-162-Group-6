@@ -16,12 +16,14 @@ SRCS = play_game.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp douglb
 
 HEADERS = douglbre_util.hpp tool.hpp paper.hpp rock.hpp scissors.hpp RPSGame.hpp
 
-EXECUTABLE = main
+EXECUTABLE = play_game
 
-main: $(OBJS) $(HEADERS)
+all: $(OBJS) play_game
+
+play_game: $(OBJS) $(HEADERS)
 	$(CXX) $(LDFLAGS) $(OBJS) -o $(EXECUTABLE)
 
-$(OBJS): $(SRCS)
+$(OBJS): $(SRCS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $(@:.o=.cpp)
 
 clean:
