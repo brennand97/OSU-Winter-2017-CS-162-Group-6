@@ -10,9 +10,9 @@ CXXFLAGS += -g
 
 LDFLAGS =
 
-OBJS = main.o tool.o paper.o rock.o scissors.o RPSGame.o douglbre_util.o
+OBJS = play_game.o tool.o paper.o rock.o scissors.o RPSGame.o douglbre_util.o
 
-SRCS = main.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp douglbre_util.cpp
+SRCS = play_game.cpp tool.cpp paper.cpp rock.cpp scissors.cpp RPSGame.cpp douglbre_util.cpp
 
 HEADERS = douglbre_util.hpp tool.hpp paper.hpp rock.hpp scissors.hpp RPSGame.hpp
 
